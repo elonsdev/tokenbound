@@ -69,7 +69,10 @@ export default function Home() {
 
   return (
     <div className='flex flex-col justify-center mt-20 items-center'>
-      <form onSubmit={handleSubmit}>
+      <h1 className='mb-10 text-lg'>
+        Get all TokenBound accounts for an NFT collection
+      </h1>
+      <form className='my-5' onSubmit={handleSubmit}>
         <label>
           Contract Address:
           <input
@@ -84,7 +87,12 @@ export default function Home() {
 
       {data.length > 0 && (
         <div>
-          <button onClick={() => handleDownload()}>Download as CSV</button>
+          <button
+            className='my-5 bg-slate-500 p-2'
+            onClick={() => handleDownload()}
+          >
+            Download as CSV
+          </button>
           <table>
             <thead>
               <tr>
